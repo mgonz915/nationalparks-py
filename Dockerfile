@@ -1,4 +1,9 @@
 FROM centos/python-36-centos7:latest
+RUN pip install --upgrade pip
+WORKDIR /usr/src/app
+COPY . .
+RUN pip install .
+
 
 USER root
 
